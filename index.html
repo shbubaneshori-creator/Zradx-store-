@@ -4,87 +4,309 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ZRADX Store — Fast & Trusted Gaming Top-Ups</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              bg: '#0b0f19',
+              card: '#111827',
+              border: '#1f2937',
+              hover: '#374151',
+              cyan: '#38bdf8',
+              green: '#22c55e',
+              greenHover: '#16a34a',
+            }
+          }
+        }
+      }
+    }
+  </script>
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', system-ui, -apple-system, sans-serif; }
-    body { background-color: #0b0f19; color: #f3f4f6; line-height: 1.5; padding: 20px 12px; display: flex; justify-content: center; }
-    .wrapper { max-width: 600px; width: 100%; display: flex; flex-direction: column; gap: 24px; }
-    .card { background-color: #111827; border: 1px solid #1f2937; border-radius: 20px; padding: 28px 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.5); text-align: center; }
-    .badge { font-size: 12px; font-weight: 700; color: #38bdf8; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 8px; display: block; }
-    h1 { font-size: 24px; font-weight: 800; color: #ffffff; line-height: 1.3; margin-bottom: 12px; }
-    p { color: #9ca3af; font-size: 14px; margin-bottom: 20px; }
-    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; text-align: left; }
-    .game-box { background-color: #1f2937; border: 1px solid #374151; border-radius: 12px; padding: 16px; }
-    .game-box h3 { font-size: 15px; color: #f9fafb; margin-bottom: 4px; }
-    .game-box p { font-size: 12px; color: #38bdf8; margin: 0; }
-    .whatsapp-btn { display: block; width: 100%; background-color: #22c55e; color: #ffffff; text-decoration: none; padding: 15px; border-radius: 12px; font-weight: 700; font-size: 15px; transition: background 0.2s; box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3); }
-    .whatsapp-btn:hover { background-color: #16a34a; }
-    .features { display: grid; grid-template-columns: 1fr; gap: 12px; text-align: left; margin-top: 10px; }
-    .feature-item { background: #1f2937; padding: 14px; border-radius: 10px; border: 1px solid #374151; }
-    .feature-item h4 { color: #f3f4f6; font-size: 14px; margin-bottom: 2px; }
-    .feature-item p { font-size: 12px; color: #9ca3af; margin: 0; }
-    .footer { text-align: center; font-size: 12px; color: #64748b; margin-top: 10px; }
+    body {
+      background-color: #0b0f19;
+      color: #f3f4f6;
+    }
+    .glow-cyan {
+      box-shadow: 0 0 25px -5px rgba(56, 189, 248, 0.15);
+    }
+    .glow-green {
+      box-shadow: 0 4px 20px rgba(34, 197, 94, 0.25);
+    }
+    /* Smooth Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0b0f19;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1f2937;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #374151;
+    }
   </style>
 </head>
-<body>
+<body class="font-sans antialiased min-h-screen pb-12 selection:bg-brand-cyan selection:text-brand-bg">
 
-  <div class="wrapper">
-    <!-- Hero Section -->
-    <div class="card">
-      <span class="badge">ZRADX STORE</span>
-      <h1>FAST & TRUSTED GAMING TOP-UPS</h1>
-      <p>Mobile Legends • PUBG Mobile • Free Fire • Clash of Clans<br>Chat directly on WhatsApp to ask, negotiate, and order your top-up.</p>
-      <a href="https://wa.me/918413837504?text=Hi!%20I%20want%20to%20top%20up%20my%20game%20account." class="whatsapp-btn">
-        Chat on WhatsApp to Order
-      </a>
-    </div>
-
-    <!-- Supported Games -->
-    <div class="card" style="text-align: left;">
-      <span class="badge">SUPPORTED GAMES</span>
-      <h2 style="font-size: 20px; color: #fff; margin-bottom: 16px;">Top up the games you already play</h2>
-      <div class="grid">
-        <div class="game-box"><h3>Mobile Legends</h3><p>Diamonds & Pass</p></div>
-        <div class="game-box"><h3>PUBG Mobile</h3><p>UC Packs</p></div>
-        <div class="game-box"><h3>Free Fire</h3><p>Diamonds & Pass</p></div>
-        <div class="game-box"><h3>Clash of Clans</h3><p>Gems & Passes</p></div>
-      </div>
-      <p style="text-align: center; font-size: 13px; color: #9ca3af; margin-bottom: 0;">No prices or checkout forms. Every request starts with a direct WhatsApp conversation.</p>
-    </div>
-
-    <!-- Why Choose Us -->
-    <div class="card" style="text-align: left;">
-      <span class="badge">WHY ZRADX STORE</span>
-      <h2 style="font-size: 20px; color: #fff; margin-bottom: 16px;">Simple, direct, and secure</h2>
-      <div class="features">
-        <div class="feature-item">
-          <h4>💬 Direct 1-on-1 WhatsApp Support</h4>
-          <p>Speak with a real person about the game and order you need.</p>
-        </div>
-        <div class="feature-item">
-          <h4>🛡️ 100% Safe & Secure Top-Ups</h4>
-          <p>Your request is handled smoothly through a direct chat thread.</p>
-        </div>
-        <div class="feature-item">
-          <h4>⚡ UPI Accepted</h4>
-          <p>Easy payment collection via GPay, PhonePe, or Paytm.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Footer CTA -->
-    <div class="card">
-      <span class="badge">READY WHEN YOU ARE</span>
-      <h2 style="font-size: 22px; color: #38bdf8; margin-bottom: 8px;">ZRADX STORE</h2>
-      <p style="margin-bottom: 20px;">Fast, trusted gaming top-ups through direct WhatsApp support.</p>
-      <a href="https://wa.me/918413837504?text=Hi!%20I%20want%20to%20top%20up%20my%20game%20account." class="whatsapp-btn">
-        Chat on WhatsApp
-      </a>
-    </div>
-
-    <div class="footer">
-      <p>© Zradx Store. All rights reserved.</p>
+  <!-- Top Announcement Bar -->
+  <div class="bg-gradient-to-r from-blue-900/60 via-brand-card to-emerald-900/60 border-b border-brand-border py-2.5 px-4 text-center text-xs sm:text-sm font-medium text-gray-300">
+    <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-center gap-2">
+      <span class="bg-brand-cyan/20 text-brand-cyan border border-brand-cyan/30 text-xs px-2 py-0.5 rounded-full font-bold uppercase tracking-wider">Notice</span>
+      <span>⚡ Fast WhatsApp Delivery | Payment via UPI (GPay / PhonePe / Paytm)</span>
     </div>
   </div>
 
-</body>
-</html>
+  <!-- Navigation Bar -->
+  <header class="sticky top-0 z-50 bg-brand-bg/90 backdrop-blur-md border-b border-brand-border">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-cyan to-brand-green flex items-center justify-center font-extrabold text-brand-bg text-xl shadow-lg">
+          Z
+        </div>
+        <div>
+          <span class="text-xl font-extrabold tracking-tight text-white block leading-none">ZRADX<span class="text-brand-cyan">STORE</span></span>
+          <span class="text-[10px] text-gray-400 font-semibold uppercase tracking-widest block mt-0.5">Top-Up Hub</span>
+        </div>
+      </a>
+      
+      <div class="flex items-center gap-3">
+        <a href="https://chat.whatsapp.com/K5h1u548lCDK9mhIik9SyB?s=cl&p=a&iam=2" target="_blank" class="hidden sm:inline-flex items-center gap-2 text-xs font-semibold text-gray-300 hover:text-white bg-brand-border hover:bg-brand-hover border border-gray-700/60 px-3.5 py-2 rounded-xl transition-all">
+          <svg class="w-4 h-4 text-brand-green" fill="currentColor" viewBox="0 0 24 24"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.964 9.964 0 001.333 4.993L2 22l5.233-1.237a9.982 9.982 0 004.779 1.217h.004c5.505 0 9.988-4.478 9.989-9.985 0-2.669-1.038-5.176-2.925-7.062A9.925 9.925 0 0012.012 2z"/></svg>
+          Join VIP Group
+        </a>
+        <a href="https://wa.me/918413837504?text=Hi!%20I%20want%20to%20order%20a%20game%20top-up." target="_blank" class="bg-brand-green hover:bg-brand-greenHover text-white text-xs sm:text-sm font-bold px-4 py-2.5 rounded-xl transition-all glow-green flex items-center gap-2">
+          <span>Order Now</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 pt-8 space-y-12">
+
+    <!-- Hero Card -->
+    <section class="relative bg-brand-card border border-brand-border rounded-3xl p-6 sm:p-10 overflow-hidden glow-cyan">
+      <div class="absolute -top-24 -right-24 w-96 h-96 bg-brand-cyan/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-brand-green/10 rounded-full blur-3xl pointer-events-none"></div>
+      
+      <div class="relative z-10 max-w-3xl">
+        <span class="inline-flex items-center gap-2 bg-brand-cyan/10 border border-brand-cyan/30 text-brand-cyan font-bold text-xs px-3.5 py-1.5 rounded-full uppercase tracking-widest mb-4">
+          <span class="w-2 h-2 rounded-full bg-brand-cyan animate-pulse"></span>
+          ZRADX STORE OFFICIAL
+        </span>
+        <h1 class="text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight mb-4">
+          FAST & TRUSTED <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-brand-green">GAMING TOP-UPS</span>
+        </h1>
+        <p class="text-gray-300 text-sm sm:text-base leading-relaxed mb-6 max-w-2xl">
+          Mobile Legends • PUBG Mobile / BGMI • Free Fire • Clash of Clans.
+          Get your game pass, diamonds, UC, and gems instantly through direct WhatsApp support with no extra waiting times or complex steps.
+        </p>
+
+        <div class="flex flex-wrap gap-3.5">
+          <a href="https://wa.me/918413837504?text=Hi!%20I%20want%20to%20top%20up%20my%20game%20account." target="_blank" class="bg-brand-green hover:bg-brand-greenHover text-white font-bold text-sm px-6 py-3.5 rounded-xl transition-all glow-green flex items-center gap-2">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+            Chat on WhatsApp to Order
+          </a>
+          <a href="https://chat.whatsapp.com/K5h1u548lCDK9mhIik9SyB?s=cl&p=a&iam=2" target="_blank" class="bg-brand-card hover:bg-brand-hover border border-brand-border text-gray-200 font-bold text-sm px-5 py-3.5 rounded-xl transition-all flex items-center gap-2">
+            Join WhatsApp Group
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Navigation Filter -->
+    <section class="space-y-4">
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-brand-border pb-4">
+        <div>
+          <span class="text-brand-cyan text-xs font-bold uppercase tracking-widest block">CATALOGUE</span>
+          <h2 class="text-2xl font-bold text-white">Supported Games & Rates</h2>
+        </div>
+        
+        <!-- Search & Filter Controls -->
+        <div class="w-full sm:w-auto flex flex-wrap gap-2">
+          <button onclick="filterGame('all')" class="filter-btn active bg-brand-cyan text-brand-bg font-bold text-xs px-4 py-2 rounded-lg transition-all">All Games</button>
+          <button onclick="filterGame('mlbb')" class="filter-btn bg-brand-card border border-brand-border hover:bg-brand-hover text-gray-300 font-bold text-xs px-4 py-2 rounded-lg transition-all">MLBB</button>
+          <button onclick="filterGame('pubg')" class="filter-btn bg-brand-card border border-brand-border hover:bg-brand-hover text-gray-300 font-bold text-xs px-4 py-2 rounded-lg transition-all">PUBG / BGMI</button>
+          <button onclick="filterGame('freefire')" class="filter-btn bg-brand-card border border-brand-border hover:bg-brand-hover text-gray-300 font-bold text-xs px-4 py-2 rounded-lg transition-all">Free Fire</button>
+          <button onclick="filterGame('coc')" class="filter-btn bg-brand-card border border-brand-border hover:bg-brand-hover text-gray-300 font-bold text-xs px-4 py-2 rounded-lg transition-all">Clash of Clans</button>
+        </div>
+      </div>
+
+      <div class="bg-brand-card/60 border border-brand-border rounded-2xl p-4 text-xs text-gray-400 flex items-center gap-3">
+        <svg class="w-5 h-5 text-brand-cyan flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        <span><strong>How to Order:</strong> Click any price button or send your User ID / Server ID along with your payment screenshot directly on WhatsApp to complete your top-up.</span>
+      </div>
+    </section>
+
+    <!-- Master Price Tables -->
+    <div class="space-y-8" id="priceTables">
+
+      <!-- 1. Mobile Legends -->
+      <section class="game-card bg-brand-card border border-brand-border rounded-2xl overflow-hidden transition-all" data-game="mlbb">
+        <div class="bg-gradient-to-r from-blue-950/40 to-brand-card p-5 border-b border-brand-border flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <span class="text-2xl">💎</span>
+            <div>
+              <h3 class="text-lg font-bold text-white">Mobile Legends: Bang Bang (MLBB)</h3>
+              <p class="text-xs text-gray-400">Diamonds & Passes • Direct ID Top-Up</p>
+            </div>
+          </div>
+          <span class="bg-brand-cyan/10 text-brand-cyan border border-brand-cyan/20 text-xs px-3 py-1 rounded-full font-semibold">Active Stock</span>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="bg-brand-bg/50 text-gray-400 text-xs uppercase tracking-wider border-b border-brand-border">
+                <th class="py-3 px-5">Tier / Pack</th>
+                <th class="py-3 px-5">Items / Amount</th>
+                <th class="py-3 px-5">Price (INR)</th>
+                <th class="py-3 px-5 text-right">Action</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-brand-border text-sm text-gray-200">
+              <tr class="hover:bg-brand-hover/40 transition-all">
+                <td class="py-3.5 px-5 font-semibold text-gray-300">Starter Pack</td>
+                <td class="py-3.5 px-5 font-bold text-white">14 Diamonds</td>
+                <td class="py-3.5 px-5 text-brand-green font-bold">₹20</td>
+                <td class="py-3.5 px-5 text-right">
+                  <a href="https://wa.me/918413837504?text=Hi!%20I%20want%20to%20buy%20MLBB%2014%20Diamonds%20for%20₹20" target="_blank" class="bg-brand-green/10 hover:bg-brand-green hover:text-white text-brand-green text-xs font-bold px-3 py-1.5 rounded-lg border border-brand-green/30 transition-all inline-block">Order</a>
+                </td>
+              </tr>
+              <tr class="hover:bg-brand-hover/40 transition-all">
+                <td class="py-3.5 px-5 font-semibold text-gray-300">Starter Pack</td>
+                <td class="py-3.5 px-5 font-bold text-white">42 Diamonds</td>
+                <td class="py-3.5 px-5 text-brand-green font-bold">₹55</td>
+                <td class="py-3.5 px-5 text-right">
+                  <a href="https://wa.me/918413837504?text=Hi!%20I%20want%20to%20buy%20MLBB%2042%20Diamonds%20for%20₹55" target="_blank" class="bg-brand-green/10 hover:bg-brand-green hover:text-white text-brand-green text-xs font-bold px-3 py-1.5 rounded-lg border border-brand-green/30 transition-all inline-block">Order</a>
+                </td>
+              </tr>
+              <tr class="hover:bg-brand-hover/40 transition-all">
+                <td class="py-3.5 px-5 font-semibold text-gray-300">Starter Pack</td>
+                <td class="py-3.5 px-5 font-bold text-white">56 Diamonds</td>
+                <td class="py-3.5 px-5 text-brand-green font-bold">₹75</td>
+                <td class="py-3.5 px-5 text-right">
+                  <a href="https://wa.me/918413837504?text=Hi!%20I%20want%20to%20buy%20MLBB%2056%20Diamonds%20for%20₹75" target="_blank" class="bg-brand-green/10 hover:bg-brand-green hover:text-white text-brand-green text-xs font-bold px-3 py-1.5 rounded-lg border border-brand-green/30 transition-all inline-block">Order</a>
+                </td>
+              </tr>
+              <tr class="hover:bg-brand-hover/40 transition-all bg-brand-cyan/5">
+                <td class="py-3.5 px-5 font-semibold text-brand-cyan flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-brand-cyan"></span> Weekly Pass
+                </td>
+                <td class="py-3.5 px-5 font-bold text-white">Weekly Diamond Pass</td>
+                <td class="py-3.5 px-5 text-brand-green font-bold">₹160</td>
+                <td class="py-3.5 px-5 text-right">
+                  <a href="https://wa.me/918413837504?text=Hi!%20I%20want%20to%20buy%20MLBB%20Weekly%20Diamond%20Pass%20for%20₹160" target="_blank" class="bg-brand-green text-white text-xs font-bold px-3 py-1.5 rounded-lg transition-all inline-block glow-green">Buy Pass</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 2. PUBG Mobile / BGMI -->
+      <section class="game-card bg-brand-card border border-brand-border rounded-2xl overflow-hidden transition-all" data-game="pubg">
+        <div class="bg-gradient-to-r from-amber-950/40 to-brand-card p-5 border-b border-brand-border flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <span class="text-2xl">🪖</span>
+            <div>
+              <h3 class="text-lg font-bold text-white">PUBG Mobile / BGMI</h3>
+              <p class="text-xs text-gray-400">Unknown Cash (UC) Packs & Royale Pass</p>
+            </div>
+          </div>
+          <span class="bg-amber-500/10 text-amber-400 border border-amber-500/20 text-xs px-3 py-1 rounded-full font-semibold">Instant Code / ID</span>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="bg-brand-bg/50 text-gray-400 text-xs uppercase tracking-wider border-b border-brand-border">
+                <th class="py-3 px-5">Tier / Pack</th>
+                <th class="py-3 px-5">Items / Amount</th>
+                <th class="py-3 px-5">Price (INR)</th>
+                <th class="py-3 px-5 text-right">Action</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-brand-border text-sm text-gray-200">
+              <tr class="hover:bg-brand-hover/40 transition-all">
+                <td class="py-3.5 px-5 font-semibold text-gray-300">Starter UC</td>
+                <td class="py-3.5 px-5 font-bold text-white">60 UC</td>
+                <td class="py-3.5 px-5 text-brand-cyan font-bold">Ask on WhatsApp</td>
+                <td class="py-3.5 px-5 text-right">
+                  <a href="https://wa.me/918413837504?text=Hi!%20What%20is%20the%20current%20price%20for%20BGMI%2060%20UC?" target="_blank" class="bg-brand-border hover:bg-brand-hover text-gray-200 text-xs font-bold px-3 py-1.5 rounded-lg transition-all inline-block">Inquire</a>
+                </td>
+              </tr>
+              <tr class="hover:bg-brand-hover/40 transition-all">
+                <td class="py-3.5 px-5 font-semibold text-gray-300">Popular Pack</td>
+                <td class="py-3.5 px-5 font-bold text-white">325 UC</td>
+                <td class="py-3.5 px-5 text-brand-cyan font-bold">Ask on WhatsApp</td>
+                <td class="py-3.5 px-5 text-right">
+                  <a href="https://wa.me/918413837504?text=Hi!%20What%20is%20the%20current%20price%20for%20BGMI%20325%20UC?" target="_blank" class="bg-brand-border hover:bg-brand-hover text-gray-200 text-xs font-bold px-3 py-1.5 rounded-lg transition-all inline-block">Inquire</a>
+                </td>
+              </tr>
+              <tr class="hover:bg-brand-hover/40 transition-all">
+                <td class="py-3.5 px-5 font-semibold text-gray-300">Royale Pass</td>
+                <td class="py-3.5 px-5 font-bold text-white">Royale Pass Pack</td>
+                <td class="py-3.5 px-5 text-brand-cyan font-bold">Ask on WhatsApp</td>
+                <td class="py-3.5 px-5 text-right">
+                  <a href="https://wa.me/918413837504?text=Hi!%20I%20want%20to%20buy%20BGMI%20Royale%20Pass." target="_blank" class="bg-brand-border hover:bg-brand-hover text-gray-200 text-xs font-bold px-3 py-1.5 rounded-lg transition-all inline-block">Inquire</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 3. Free Fire -->
+      <section class="game-card bg-brand-card border border-brand-border rounded-2xl overflow-hidden transition-all" data-game="freefire">
+        <div class="bg-gradient-to-r from-red-950/40 to-brand-card p-5 border-b border-brand-border flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <span class="text-2xl">🔥</span>
+            <div>
+              <h3 class="text-lg font-bold text-white">Free Fire</h3>
+              <p class="text-xs text-gray-400">Diamonds & Weekly/Monthly Memberships</p>
+            </div>
+          </div>
+          <span class="bg-red-500/10 text-red-400 border border-red-500/20 text-xs px-3 py-1 rounded-full font-semibold">Active Stock</span>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="bg-brand-bg/50 text-gray-400 text-xs uppercase tracking-wider border-b border-brand-border">
+                <th class="py-3 px-5">Tier / Pack</th>
+                <th class="py-3 px-5">Items / Amount</th>
+                <th class="py-3 px-5">Price (INR)</th>
+                <th class="py-3 px-5 text-right">Action</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-brand-border text-sm text-gray-200">
+              <tr class="hover:bg-brand-hover/40 transition-all">
+                <td class="py-3.5 px-5 font-semibold text-gray-300">Starter Pack</td>
+                <td class="py-3.5 px-5 font-bold text-white">100 Diamonds</td>
+                <td class="py-3.5 px-5 text-brand-cyan font-bold">Ask on WhatsApp</td>
+                <td class="py-3.5 px-5 text-right">
+                  <a href="https://wa.me/918413837504?text=Hi!%20I%20want%20to%20top%20up%20Free%20Fire%20100%20Diamonds." target="_blank" class="bg-brand-border hover:bg-brand-hover text-gray-200 text-xs font-bold px-3 py-1.5 rounded-lg transition-all inline-block">Inquire</a>
+                </td>
+              </tr>
+              <tr class="hover:bg-brand-hover/40 transition-all">
+                <td class="py-3.5 px-5 font-semibold text-gray-300">Membership</td>
+                <td class="py-3.5 px-5 font-bold text-white">Weekly Membership</td>
+                <td class="py-3.5 px-5 text-brand-cyan font-bold">Ask on WhatsApp</td>
+                <td class="py-3.5 px-5 text-right">
+                  <a href="https://wa.me/918413837504?text=Hi!%20I%20want%20to%20buy%20Free%20Fire%20Weekly%20Membership." target="_blank" class="bg-brand-border hover:bg-brand-hover text-gray-200 text-xs font-bold px-3 py-1.5 rounded-lg transition-all inline-block">Inquire</a>
+                </td>
+              </tr>
+              <tr class="hover:bg-brand-hover/40 transition-all">
+                <td class="py-3.5 px-5
